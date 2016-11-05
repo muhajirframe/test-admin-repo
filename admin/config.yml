@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: muhajirframe/test-admin-repo # owner/repo
+  branch: master # master
+
+public_folder: "{PHENOMIC_SOURCE}"
+media_folder: "{PHENOMIC_SOURCE}/{ASSETS_FOLDER}"
+
+collections:
+  - name: "post"
+    label: "Post"
+    folder: "{PHENOMIC_SOURCE}/posts"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+    meta:
+      - {label: "Publish Date", name: "date", widget: "datetime"}
